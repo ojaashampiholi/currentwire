@@ -20,13 +20,15 @@ The build is static HTML (`output: 'static'`) written to `dist/`.
 
 ## GitHub Pages
 
-Defaults suit a site served from `/`. For a project site at `https://ojaashampiholi.github.io/currentwire/`:
+The site is published at [https://ojaashampiholi.github.io/currentwire/](https://ojaashampiholi.github.io/currentwire/).
 
-```bash
-BASE_PATH=/currentwire/ SITE=https://ojaashampiholi.github.io npm run build
-```
+[`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) runs on every push to `main` (and can be started manually). It installs dependencies, builds the static site, uploads `dist/`, and deploys with GitHub Actions. **GitHub Actions** is the Pages source.
 
-Upload the contents of `dist/`. No host-specific adapter is required.
+After the workflow lands on `main`, open **Settings → Pages** and set **Source** to **GitHub Actions** if it is not already.
+
+This is a project site, not a user homepage, so the workflow builds with `BASE_PATH=/currentwire` and `SITE=https://ojaashampiholi.github.io`. Astro writes the site to its default `dist/` directory, which is the Pages artifact.
+
+A custom domain can be added later from the Pages settings.
 
 ## Content
 
