@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  isHttpUrl,
+  formatIst,
+  latestEdition,
+  longDateLabel,
+  sectionTitle,
+  sitePath,
+  statusTags,
+  topicalTags,
+  type StoryEntry,
+} from '../../lib/site';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories');
+  return stories.map((story) => ({
+    params: { slug: story.data.slug },
+    props: { story },
+  }));
+}
+
+interface Props {
+  story: StoryEntry;
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const edition = latestEdition();
+const sections = await getCollection('sections');
+const sectionName = sectionTitle(sections, story.data.section);
+const dateLabel = longDateLabel(edition.date);
+const image = story.data.image ? `${import.meta.env.BASE_URL}${story.data.image.replace(/^\//, '')}` : undefined;
+---
+
+<BaseLayout
+  title={`${story.data.seo_title} · CurrentWire`}
+  description={story.data.meta_description}
+  lastUpdatedIst={story.data.last_updated_ist}
+  dateLabel={dateLabel}
+  kicker={sectionName}
+  timezone={edition.timezone}
+>
+  <article class="story">
+    <div class="tagrow">
+      <a class="tag" href={sitePath(`section/${story.data.section}`)}>{sectionName}</a>
+      {
+        statusTags(story.data.tags).map((tag) => (
+          <span class:list={['tag', { dev: tag === 'DEVELOPING' || tag === 'CONTINUING UPDATE', live: tag === 'LIVE' }]}>
+            {tag === 'CONTINUING UPDATE' ? 'Continuing' : tag.charAt(0) + tag.slice(1).toLowerCase()}
+          </span>
+        ))
+      }
+      {topicalTags(story.data.tags).map((tag) => <span class="tag topic">{tag}</span>)}
+    </div>
+    <h1>{story.data.title}</h1>
+    <p class="deck">{story.data.subtitle}</p>
+    <p class="stamp">
+      Filed {formatIst(story.data.first_filed_ist)} · Updated {formatIst(story.data.last_updated_ist)}
+    </p>
+    {
+      image && (
+        <figure class="thumb">
+          <img src={image} alt={story.data.image_alt || story.data.title} />
+          {story.data.image_credit && <figcaption class="credit figure-credit">{story.data.image_credit}</figcaption>}
+        </figure>
+      )
+    }
+    <div class="story-body">
+      <Content />
+    </div>
+    {
+      story.data.sources.length > 0 && (
+        <section class="sources">
+          <h2>Sources</h2>
+          <ul>
+            {story.data.sources.map((source) => (
+              <li>
+                {isHttpUrl(source.url) ? (
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a>
+                ) : (
+                  <span>
+                    {source.name}
+                    {source.url ? ` (${source.url})` : ''}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+    <p class="backlink"><a href={sitePath(`section/${story.data.section}`)}>More in {sectionName}</a></p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import type { CardModel } from '../lib/types';
+
+interface Props {
+  story: CardModel;
+  variant: 'hero' | 'a2' | 'rail';
+}
+
+const { story, variant } = Astro.props;
+const stamp = `Filed ${story.filedLabel} · Updated ${story.updatedLabel}`;
+---
+
+<article class={variant === 'a2' ? undefined : variant === 'rail' ? undefined : 'hero'}>
+  {
+    story.image && (
+      <div class={variant === 'hero' ? undefined : 'thumb'}>
+        <img
+          src={story.image}
+          alt={story.imageAlt || ''}
+          loading={variant === 'hero' ? 'eager' : 'lazy'}
+        />
+      </div>
+    )
+  }
+  <div class={variant === 'hero' ? 'body' : undefined}>
+    <div class="tagrow">
+      <a class="tag" href={story.sectionHref}>{story.sectionTitle}</a>
+      {
+        story.statusTags.map((tag) => (
+          <span class:list={['tag', { dev: tag === 'DEVELOPING' || tag === 'CONTINUING UPDATE', live: tag === 'LIVE' }]}>
+            {tag === 'CONTINUING UPDATE' ? 'Continuing' : tag.charAt(0) + tag.slice(1).toLowerCase()}
+          </span>
+        ))
+      }
+    </div>
+    {
+      variant === 'rail' ? (
+        <h4><a href={story.href}>{story.title}</a></h4>
+      ) : (
+        <h3><a href={story.href}>{story.title}</a></h3>
+      )
+    }
+    {variant === 'hero' && <p class="deck">{story.subtitle}</p>}
+    {variant !== 'hero' && <p>{story.subtitle}</p>}
+    {
+      variant === 'hero' && story.sourceNames.length > 0 ? (
+        <p class="src">
+          {story.sourceNames.join(' · ')} · <span class="stamp">{stamp}</span>
+        </p>
+      ) : (
+        <p class="stamp">{stamp}</p>
+      )
+    }
+    {story.imageCredit && <span class="credit">{story.imageCredit}</span>}
+  </div>
+</article>

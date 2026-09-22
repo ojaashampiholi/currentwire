@@ -1,0 +1,52 @@
+---
+import StoryCard from './StoryCard.astro';
+import type { CardModel } from '../lib/types';
+
+interface Props {
+  middle: CardModel[];
+  rail: CardModel[];
+  railLabel?: string;
+  emptyRailNote?: string;
+}
+
+const { middle, rail, railLabel = 'More Top Picks', emptyRailNote } = Astro.props;
+const hero = middle[0];
+const secondary = middle.slice(1, 3);
+const center = middle.slice(3);
+const showNote = rail.length === 0 && Boolean(emptyRailNote);
+---
+
+<div class:list={['grid', { single: rail.length === 0 && !showNote }]}>
+  <div>
+    {hero && <StoryCard story={hero} variant="hero" />}
+    {
+      secondary.length > 0 && (
+        <div class="a2">
+          {secondary.map((story) => <StoryCard story={story} variant="a2" />)}
+        </div>
+      )
+    }
+    {
+      center.length > 0 && (
+        <div class="center">
+          {center.map((story) => <StoryCard story={story} variant="a2" />)}
+        </div>
+      )
+    }
+  </div>
+  {
+    (rail.length > 0 || showNote) && (
+      <aside class="rail" aria-label={railLabel}>
+        {rail.map((story) => <StoryCard story={story} variant="rail" />)}
+        {
+          showNote && (
+            <article>
+              <h4>On this desk</h4>
+              <p>{emptyRailNote}</p>
+            </article>
+          )
+        }
+      </aside>
+    )
+  }
+</div>

@@ -1,0 +1,23 @@
+---
+import EditionFront from '../components/EditionFront.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { latestEdition, loadDesk, longDateLabel } from '../lib/site';
+
+const edition = latestEdition();
+const { stories, sections } = await loadDesk();
+const dateLabel = longDateLabel(edition.date);
+---
+
+<BaseLayout
+  title={`CurrentWire · ${dateLabel}`}
+  description="CurrentWire front for 22 September 2026: Google's proposed CSAM reporting pathway to Indian authorities, Alibaba Zhenwu V900, the Sri Lanka Easter trial verdict, and the rest of the morning ladder."
+  lastUpdatedIst={edition.last_updated_ist}
+  dateLabel={dateLabel}
+  kicker={edition.kicker}
+  timezone={edition.timezone}
+  brandIsHeading={true}
+  activeEdition={edition.date}
+  todayLinksHome={true}
+>
+  <EditionFront edition={edition} stories={stories} sections={sections} />
+</BaseLayout>

@@ -1,0 +1,18 @@
+{
+  "name": "currentwire",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CurrentWire, a morning news front for the stories worth following.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.16.15"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

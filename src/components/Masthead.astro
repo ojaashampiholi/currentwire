@@ -1,0 +1,59 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import { formatIst, sitePath } from '../lib/site';
+
+interface Props {
+  lastUpdatedIst: string;
+  dateLabel: string;
+  timezone?: string;
+  kicker?: string;
+  brandIsHeading?: boolean;
+}
+
+const {
+  lastUpdatedIst,
+  dateLabel,
+  timezone = 'Asia/Calcutta',
+  kicker = 'Morning front',
+  brandIsHeading = false,
+} = Astro.props;
+
+const home = sitePath();
+const about = sitePath('about');
+const path = Astro.url.pathname;
+const onHome = path === home || path === home.replace(/\/$/, '') || path === '/';
+const onAbout = path === about || path === about.replace(/\/$/, '');
+---
+
+<div class="topbar">
+  <div>Last updated: <strong>{formatIst(lastUpdatedIst)}</strong> · {timezone}</div>
+  <div class="topbar-actions">
+    <nav class="topnav" aria-label="Site">
+      <a href={home} aria-current={onHome ? 'page' : undefined}>Front</a>
+      <a href={about} aria-current={onAbout ? 'page' : undefined}>About</a>
+    </nav>
+    <ThemeToggle />
+  </div>
+</div>
+<header class="masthead">
+  <a href={home} class="brand-row">
+    <img class="logo" src={`${import.meta.env.BASE_URL}images/logo.png`} alt="CurrentWire" />
+  </a>
+  {
+    brandIsHeading ? (
+      <h1 class="brand">
+        <a href={home}>CurrentWire</a>
+      </h1>
+    ) : (
+      <p class="brand">
+        <a class="brand-link" href={home}>CurrentWire</a>
+      </p>
+    )
+  }
+  <p class="sub">For the stories worth following, and the questions worth carrying into the day.</p>
+  <div class="meta">
+    <span>{dateLabel}</span>
+    <span>{kicker}</span>
+    <span>{timezone}</span>
+  </div>
+</header>

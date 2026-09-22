@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-22",
+  "label": "Tuesday, 22 September 2026",
+  "timezone": "Asia/Calcutta",
+  "last_updated_ist": "2026-09-22 10:14 AM IST",
+  "kicker": "Morning front",
+  "top_picks": {
+    "middle": [
+      "google-csam-report-india",
+      "alibaba-zhenwu-v900",
+      "sri-lanka-easter-verdict-day"
+    ],
+    "rail": [
+      "iit-bombay-cctv-crime-branch",
+      "us-greenland-bases-arctic-deal",
+      "india-sl-cricket-final",
+      "sc-default-bail-investigation"
+    ]
+  },
+  "hub_order": [
+    "india",
+    "maharashtra",
+    "mmr",
+    "neighbours",
+    "united-states",
+    "russia-china",
+    "eu-uk",
+    "apac",
+    "anz",
+    "middle-east",
+    "india-finance",
+    "global-finance",
+    "science-math",
+    "general-tech",
+    "ai-ml",
+    "cybersecurity",
+    "football",
+    "cricket",
+    "other-sports"
+  ],
+  "live_wire": [
+    "Google CSAM pathway",
+    "Alibaba Zhenwu V900",
+    "Sensex and Nifty opened modestly higher",
+    "Pakistan women won cricket bronze",
+    "Sri Lanka Easter verdict still pending",
+    "India vs Sri Lanka gold final set for about 10:30 IST"
+  ]
+}

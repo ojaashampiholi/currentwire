@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { latestEdition, longDateLabel } from '../lib/site';
+
+const edition = latestEdition();
+const dateLabel = longDateLabel(edition.date);
+---
+
+<BaseLayout
+  title="About CurrentWire"
+  description="CurrentWire is a morning news front for the stories worth following, and the questions worth carrying into the day."
+  lastUpdatedIst={edition.last_updated_ist}
+  dateLabel={dateLabel}
+  kicker="About"
+  timezone={edition.timezone}
+>
+  <article class="about-card">
+    <h1>About CurrentWire</h1>
+    <p>
+      CurrentWire is a morning news front. It keeps a short ladder of stories worth following, then files the rest by section so the useful questions can travel into the day.
+    </p>
+    <p>
+      The front page leads with Top Picks: a middle stack for the stronger and fresher stories, and a right rail for the rest of that ladder. Every section hub uses the same ladder.
+    </p>
+    <p>
+      Editions are dated in India Standard Time (Asia/Calcutta). The bar at the top of a page shows when that edition was last updated. A story page also shows when the piece was first filed and when it was last updated.
+    </p>
+    <h2>Credit</h2>
+    <p>Built and maintained by Ojaas Hampiholi.</p>
+    <p>
+      <a href="https://ojaashampiholi.github.io/the-cosmic-notebook/" target="_blank" rel="noopener noreferrer">The Cosmic Notebook</a>
+      is a separate project: clear, curious notes on the forces, worlds, and ideas that shape our universe.
+    </p>
+    <p>More from Ojaas (tech and fiction) coming here.</p>
+  </article>
+</BaseLayout>
