@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hang Seng opens 0.51% higher near 25,170 after Nasdaq rally | CurrentWire</title>
+<meta name="description" content="Hong Kong&#x27;s Hang Seng Index opened about 0.51% higher near 25,170 on 22 September, with Hang Seng Tech up about 1.01% at the open."/>
+<style>
+:root {
+  --c1-paper: #f0e2c8;
+  --c2-ink: #14213d;
+  --c3-muted: #5c6b7a;
+  --c4-rule: #d4cfc4;
+  --c5-accent: #c45c26;
+  --c6-live: #b91c1c;
+  --c7-develop: #0f6e56;
+  --c8-card: #f3e6cf;
+  --c9-sky: #2f6fed;
+  --grad-angle: 142deg;
+  color-scheme: light dark;
+}
+html[data-theme="light"] {
+  --c1-paper: #f0e2c8;
+  --c2-ink: #14213d;
+  --c3-muted: #5c6b7a;
+  --c4-rule: #d4cfc4;
+  --c5-accent: #c45c26;
+  --c6-live: #b91c1c;
+  --c7-develop: #0f6e56;
+  --c8-card: #f3e6cf;
+  --c9-sky: #2f6fed;
+}
+html[data-theme="dark"] {
+  --c1-paper: #1b2433;
+  --c2-ink: #e8eef5;
+  --c3-muted: #9aa8b5;
+  --c4-rule: #3a4658;
+  --c5-accent: #e07a3d;
+  --c6-live: #f07178;
+  --c7-develop: #3dd6a5;
+  --c8-card: #243044;
+  --c9-sky: #6ea8ff;
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] {
+    --c1-paper: #1b2433;
+    --c2-ink: #e8eef5;
+    --c3-muted: #9aa8b5;
+    --c4-rule: #3a4658;
+    --c5-accent: #e07a3d;
+    --c6-live: #f07178;
+    --c7-develop: #3dd6a5;
+    --c8-card: #243044;
+    --c9-sky: #6ea8ff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[data-theme="system"] {
+    --c1-paper: #f0e2c8;
+    --c2-ink: #14213d;
+    --c3-muted: #5c6b7a;
+    --c4-rule: #d4cfc4;
+    --c5-accent: #c45c26;
+    --c6-live: #b91c1c;
+    --c7-develop: #0f6e56;
+    --c8-card: #f3e6cf;
+    --c9-sky: #2f6fed;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--c2-ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  min-height: 100vh;
+  background-color: var(--c1-paper);
+  background-attachment: fixed;
+}
+/* Light: blue → cream → light yellow → orange → soft red → blue (no white) */
+html[data-theme="light"] body,
+html[data-theme="system"] body {
+  background-image: linear-gradient(var(--grad-angle),
+    #b9d4ef 0%, #e8d5b0 22%, #f7efb4 40%, #efb87a 58%, #e89a92 76%, #c5d8ee 100%);
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] body {
+    background-image: linear-gradient(var(--grad-angle),
+      #1a2a44 0%, #1e3d48 25%, #3a2a4a 50%, #2a3358 75%, #243a55 100%);
+  }
+}
+html[data-theme="dark"] body {
+  background-image: linear-gradient(var(--grad-angle),
+    #1a2a44 0%, #1e3d48 25%, #3a2a4a 50%, #2a3358 75%, #243a55 100%);
+}
+.shell { max-width: 1120px; margin: 0 auto; padding: 20px 24px 48px; }
+.topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--c3-muted); margin-bottom: 10px; }
+.theme-toggle { display: inline-flex; border: 1px solid var(--c4-rule); border-radius: 999px; overflow: hidden; background: var(--c8-card); }
+.theme-toggle button { border: 0; background: transparent; color: var(--c3-muted); padding: 6px 10px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.theme-toggle button[aria-pressed="true"] { background: var(--c9-sky); color: #fff; }
+.masthead { text-align: center; padding: 8px 0 14px; border-bottom: 3px solid var(--c2-ink); }
+.masthead .logo { display: block; margin: 0 auto 8px; height: 56px; width: auto; max-width: 220px; object-fit: contain; }
+.masthead .brand-row { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.masthead .brand { font-family: "Times New Roman", Times, Georgia, serif; font-size: clamp(32px, 5vw, 44px); margin: 0 0 4px; }
+.masthead .brand a { color: inherit; text-decoration: none; }
+.masthead .sub { margin: 0 0 12px; font-size: 12px; color: var(--c3-muted); font-style: italic; }
+.masthead .meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c3-muted); border-top: 1px solid var(--c4-rule); padding-top: 8px; }
+.archive { margin: 14px 0 16px; padding: 12px; border-radius: 12px; background: var(--c8-card); border: 1px solid var(--c4-rule); }
+.archive .label { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c5-accent); margin: 0 0 8px; }
+.archive-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.archive-row a { text-decoration: none; color: var(--c2-ink); border: 1px solid var(--c4-rule); border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 600; background: var(--c1-paper); }
+.archive-row a.today { border-color: var(--c9-sky); color: var(--c9-sky); }
+.live { margin: 0 0 18px; padding: 10px 12px; border-radius: 10px; background: var(--c8-card); border: 1px solid var(--c4-rule); display: flex; gap: 10px; align-items: center; font-size: 12.5px; }
+.live .pill { background: var(--c6-live); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; }
+.section-label { font-family: "Times New Roman", Times, Georgia, serif; font-size: 22px; margin: 0 0 12px; }
+.grid { display: grid; grid-template-columns: 1.55fr 0.9fr; gap: 24px; }
+.tagrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tag { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--c2-ink); color: var(--c2-ink); padding: 2px 6px; border-radius: 3px; }
+.tag.dev { border-color: var(--c7-develop); color: var(--c7-develop); }
+.tag.live { border-color: var(--c6-live); color: var(--c6-live); }
+.hero, .a2 article, .center article, .rail article { background: var(--c8-card); border: 1px solid var(--c4-rule); border-radius: 12px; overflow: hidden; }
+.hero { margin-bottom: 14px; }
+.hero .body, .a2 article, .center article, .rail article { padding: 14px 16px; }
+.hero img, .thumb img { display: block; width: 100%; height: auto; max-height: 280px; object-fit: cover; }
+.thumb { margin: 0 0 10px; border-radius: 8px; overflow: hidden; }
+.hero h2, .a2 h3, .center h3, .rail h4, .hub h2 { font-family: "Times New Roman", Times, Georgia, serif; font-weight: 700; line-height: 1.15; margin: 0 0 8px; }
+.hero h2 { font-size: 28px; }
+.hero h2 a, .a2 h3 a, .center h3 a, .rail h4 a { color: inherit; text-decoration: none; }
+.deck { font-size: 15px; color: var(--c3-muted); margin: 0 0 8px; }
+.lede, .a2 p, .center p, .rail p { margin: 0 0 6px; font-size: 13.5px; }
+.stamp, .src, .credit { font-size: 11px; color: var(--c3-muted); }
+.credit { display: block; margin-top: 4px; }
+.a2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.a2 h3 { font-size: 17px; }
+.center { display: grid; gap: 12px; }
+.center h3 { font-size: 18px; }
+.rail { display: grid; gap: 12px; align-content: start; }
+.rail h4 { font-size: 15px; }
+.hub { margin-top: 28px; padding-top: 18px; border-top: 2px solid var(--c2-ink); }
+.hub h2 { font-size: 26px; color: var(--c2-ink); }
+.hub .cap { font-size: 11px; color: var(--c3-muted); margin: 0 0 14px; }
+.hub-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.hub-cards article { background: var(--c8-card); border: 1px solid var(--c4-rule); border-radius: 12px; padding: 14px 16px; }
+.hub-cards h3 { font-family: "Times New Roman", Times, Georgia, serif; font-size: 17px; margin: 0 0 8px; line-height: 1.15; }
+.hub-cards h3 a { color: inherit; text-decoration: none; }
+.site-footer { margin-top: 36px; padding: 22px 4px 10px; border-top: 2px solid var(--c2-ink); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+.footer-col .fname { font-family: "Times New Roman", Times, Georgia, serif; font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+.footer-col .fwhy, .footer-col .fcosmo-pitch, .footer-col .fmore { font-size: 13px; color: var(--c3-muted); margin: 0 0 8px; line-height: 1.4; }
+.footer-col .fwhy { font-style: italic; }
+.footer-col .fcredit { font-size: 12px; color: var(--c3-muted); margin: 0; }
+.footer-col .fcosmo-cta { margin: 0 0 8px; }
+.footer-col .fcosmo-cta a { color: var(--c9-sky); font-weight: 600; font-size: 13px; text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--c9-sky) 50%, transparent); }
+.note { margin-top: 16px; font-size: 11px; color: var(--c3-muted); }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .a2 { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .shell { padding: 12px 14px 40px; }
+  .masthead .brand { font-size: 28px; }
+  .hero h2 { font-size: 1.4rem; }
+  .live { flex-direction: column; align-items: flex-start; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+  .hero img, .thumb img { max-height: 200px; }
+}
+.shell { max-width: 820px; }
+.crumb { font-size: 12px; color: var(--c3-muted); margin: 12px 0; }
+.crumb a { color: var(--c9-sky); text-decoration: none; }
+.hero-img { margin: 0 0 14px; border-radius: 12px; overflow: hidden; border: 1px solid var(--c4-rule); background: var(--c8-card); }
+.hero-img img { display: block; width: 100%; max-height: 360px; object-fit: cover; }
+.hero-img .credit { padding: 8px 12px; }
+h1.story-title { font-family: "Times New Roman", Times, Georgia, serif; font-size: clamp(26px, 4vw, 34px); line-height: 1.15; margin: 0 0 10px; }
+.bylines { font-size: 12px; color: var(--c3-muted); border-top: 1px solid var(--c4-rule); border-bottom: 1px solid var(--c4-rule); padding: 10px 0; margin: 0 0 16px; }
+.aeo { background: var(--c8-card); border: 1px solid var(--c4-rule); border-left: 4px solid var(--c9-sky); border-radius: 10px; padding: 12px 14px; margin: 0 0 18px; font-size: 14.5px; }
+.aeo strong { display: block; font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c9-sky); margin-bottom: 6px; }
+.article p { margin: 0 0 1em; font-size: 16px; line-height: 1.6; }
+.sources { margin-top: 28px; padding-top: 14px; border-top: 2px solid var(--c2-ink); }
+.sources h2 { font-family: "Times New Roman", Times, Georgia, serif; font-size: 18px; margin: 0 0 8px; }
+.sources ul { margin: 0; padding-left: 18px; }
+.sources li { margin: 0 0 6px; font-size: 14px; }
+.sources a { color: var(--c9-sky); }
+.seo-box { margin-top: 22px; padding: 12px; border: 1px dashed var(--c4-rule); border-radius: 10px; font-size: 12px; color: var(--c3-muted); background: var(--c8-card); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div>Last updated: <strong style="color:var(--c2-ink)">22 Sep 2026, 8:20 AM IST</strong> · Asia/Calcutta</div>
+    <div class="theme-toggle" role="group" aria-label="Color theme">
+    <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+  </div>
+  <header class="masthead">
+    <a href="../index.html" class="brand-row"><img class="logo" src="../images/logo.png" alt="CurrentWire"/></a>
+    <h1 class="brand"><a href="../index.html">CurrentWire</a></h1>
+    <p class="sub">For the stories worth following, and the questions worth carrying into the day.</p>
+    <div class="meta"><span>Tuesday, 22 September 2026</span><span>Story</span><span>Asia/Calcutta</span></div>
+  </header>
+  <nav class="crumb"><a href="../index.html">Home</a> · APAC · Story</nav>
+  <div class="tagrow"><span class="tag">APAC</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+  <h1 class="story-title">Hang Seng opens about 0.51% higher as Wall Street tech rally lifts Asia</h1>
+  <p class="deck">Hong Kong cash open near 25,170; Hang Seng Tech up about 1.01%, with Kospi and Nikkei also higher in available readings</p>
+  <div class="bylines">First filed: 22 Sep 2026, 8:05 AM IST · Last updated: 22 Sep 2026, 8:05 AM IST<br/>CurrentWire · paraphrased from packet sources</div>
+  <aside class="aeo"><strong>In brief</strong>Hong Kong&#x27;s Hang Seng Index opened about 0.51% higher on Tuesday 22 September at about 25,170, with the Hang Seng Tech Index up about 1.01%, according to Sina Finance and Sing Tao Headline. Tencent, Alibaba and Xiaomi were higher in early trade after the Nasdaq rose about 2.3% and the S&amp;P 500 about 1.5%. ScanX and CNBC-TV18 noted Kospi gains of more than 2% and a Nikkei rise of about 1.4% in available readings. Figures are opening or early-session prints, not an Asia close.</aside>
+  <article class="article"><p>Hong Kong&#x27;s Hang Seng Index opened about 0.51% higher on Tuesday 22 September at about 25,170, according to Sina Finance and Sing Tao Headline market opens, while the Hang Seng Tech Index was up about 1.01% at the open. Technology names including Tencent, Alibaba and Xiaomi were reported higher in early trade. The move followed Monday&#x27;s Wall Street session, in which the Nasdaq Composite rose about 2.3% and the S&amp;P 500 about 1.5%, lifting risk appetite into the Asian cash day.</p><p>ScanX and CNBC-TV18 morning notes separately described wider Asia gains, including South Korea&#x27;s Kospi up more than 2% and Japan&#x27;s Nikkei 225 up about 1.4% in available session readings. Those regional figures are supporting colour, not a claim that Asia has finished the day. The Hang Seng levels here are point-in-time opening or early-session prints, distinct from the ASX open already covered in the prior packet, and live values can change after the cutoff.</p></article>
+  <section class="sources"><h2>Sources</h2><ul>
+    <li><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-22/doc-inisscmp5699568.shtml" target="_blank" rel="noopener noreferrer">Sina Finance</a></li>
+    <li><a href="https://www.stheadline.com/stock-market/3617988/%E6%81%92%E6%8C%87%E9%AB%98%E9%96%8B128%E9%BB%9E-%E9%98%BF%E9%87%8C%E9%A8%B0%E8%A8%8A%E5%90%91%E4%B8%8A-%E7%8F%A0%E5%B3%B0%E9%BB%83%E9%87%91%E6%8A%98%E8%AE%93%E8%BF%9118%E9%85%8D%E8%82%A1-%E5%8D%9A%E9%9B%85%E5%A2%9E%E6%8C%81%E6%AF%94%E7%89%B9%E5%B9%A3%E5%8D%874%E6%B8%AF%E8%82%A1%E9%96%8B%E5%B8%82" target="_blank" rel="noopener noreferrer">Sing Tao Headline</a></li>
+    <li><a href="https://scanx.trade/stock-market-news/global/asian-shares-open-higher-wall-street-rally-meta-s-11-rise/51582386" target="_blank" rel="noopener noreferrer">ScanX</a></li>
+    <li><a href="https://www.cnbctv18.com/market/stock-market-live-updates-sensex-nifty-50-expiry-today-it-pine-labs-defence-grse-waaree-nse-allotment-oil-ril-share-price-liveblog-19995286.htm" target="_blank" rel="noopener noreferrer">CNBC-TV18 live markets blog</a></li>
+  </ul></section>
+  <div class="seo-box"><strong>SEO / AEO</strong><br/>Hang Seng opens 0.51% higher near 25,170 after Nasdaq rally<br/>Hong Kong&#x27;s Hang Seng Index opened about 0.51% higher near 25,170 on 22 September, with Hang Seng Tech up about 1.01% at the open.<br/>Angle: A point-in-time Hang Seng open print after Wall Street&#x27;s tech rally, distinct from the earlier ASX open already covered.</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="fname">CurrentWire</p>
+      <p class="fwhy">For the stories worth following, and the questions worth carrying into the day.</p>
+      <p class="fcredit">Built and maintained by Ojaas Hampiholi</p>
+    </div>
+    <div class="footer-col">
+      <p class="fname">The Cosmic Notebook</p>
+      <p class="fcosmo-pitch">Clear, curious notes on the forces, worlds, and ideas that shape our universe.</p>
+      <p class="fcosmo-cta"><a href="https://ojaashampiholi.github.io/the-cosmic-notebook/" target="_blank" rel="noopener noreferrer">Visit The Cosmic Notebook</a></p>
+      <p class="fmore">More from Ojaas (tech and fiction) coming here.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var key = "cw-theme";
+  function spinGradient() {
+    root.style.setProperty("--grad-angle", Math.floor(Math.random() * 360) + "deg");
+  }
+  window.spinGradient = spinGradient;
+  function apply(choice) {
+    root.setAttribute("data-theme", choice);
+    localStorage.setItem(key, choice);
+    document.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-theme-choice") === choice ? "true" : "false");
+    });
+    spinGradient();
+  }
+  apply(localStorage.getItem(key) || "system");
+  document.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-theme-choice")); });
+  });
+})();
+</script>
+</body>
+</html>

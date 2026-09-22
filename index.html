@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CurrentWire  -  22 September 2026</title>
+<meta name="description" content="CurrentWire front for 22 September 2026: Google CSAM reporting pathway to Indian authorities, Alibaba Zhenwu V900 and 20 GW target, Sensex and Nifty open, Sri Lanka Easter verdict still pending, Pakistan women win cricket bronze, India-Sri Lanka cricket final and Supreme Court default-bail ruling."/>
+<style>
+:root {
+  --c1-paper: #f0e2c8;
+  --c2-ink: #14213d;
+  --c3-muted: #5c6b7a;
+  --c4-rule: #d4cfc4;
+  --c5-accent: #c45c26;
+  --c6-live: #b91c1c;
+  --c7-develop: #0f6e56;
+  --c8-card: #f3e6cf;
+  --c9-sky: #2f6fed;
+  --grad-angle: 142deg;
+  color-scheme: light dark;
+}
+html[data-theme="light"] {
+  --c1-paper: #f0e2c8;
+  --c2-ink: #14213d;
+  --c3-muted: #5c6b7a;
+  --c4-rule: #d4cfc4;
+  --c5-accent: #c45c26;
+  --c6-live: #b91c1c;
+  --c7-develop: #0f6e56;
+  --c8-card: #f3e6cf;
+  --c9-sky: #2f6fed;
+}
+html[data-theme="dark"] {
+  --c1-paper: #1b2433;
+  --c2-ink: #e8eef5;
+  --c3-muted: #9aa8b5;
+  --c4-rule: #3a4658;
+  --c5-accent: #e07a3d;
+  --c6-live: #f07178;
+  --c7-develop: #3dd6a5;
+  --c8-card: #243044;
+  --c9-sky: #6ea8ff;
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] {
+    --c1-paper: #1b2433;
+    --c2-ink: #e8eef5;
+    --c3-muted: #9aa8b5;
+    --c4-rule: #3a4658;
+    --c5-accent: #e07a3d;
+    --c6-live: #f07178;
+    --c7-develop: #3dd6a5;
+    --c8-card: #243044;
+    --c9-sky: #6ea8ff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  html[data-theme="system"] {
+    --c1-paper: #f0e2c8;
+    --c2-ink: #14213d;
+    --c3-muted: #5c6b7a;
+    --c4-rule: #d4cfc4;
+    --c5-accent: #c45c26;
+    --c6-live: #b91c1c;
+    --c7-develop: #0f6e56;
+    --c8-card: #f3e6cf;
+    --c9-sky: #2f6fed;
+  }
+}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--c2-ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  min-height: 100vh;
+  background-color: var(--c1-paper);
+  background-attachment: fixed;
+  position: relative;
+}
+/* Light: 3 colours only - light blue / cream / light red (loop) */
+html[data-theme="light"] body,
+html[data-theme="system"] body {
+  background-color: #f3e9d4;
+  background-image: linear-gradient(var(--grad-angle),
+    #b7d4ef 0%,
+    #f3e6c8 25%,
+    #f0b4a8 50%,
+    #f3e6c8 75%,
+    #b7d4ef 100%);
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] body {
+    background-color: #1b2433;
+    background-image: linear-gradient(var(--grad-angle),
+      #1a2a44 0%,
+      #2a3558 35%,
+      #3a2a4a 65%,
+      #1a2a44 100%);
+  }
+}
+html[data-theme="dark"] body {
+  background-color: #1b2433;
+  background-image: linear-gradient(var(--grad-angle),
+    #1a2a44 0%,
+    #2a3558 35%,
+    #3a2a4a 65%,
+    #1a2a44 100%);
+}
+.shell { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 20px 24px 48px; }
+.topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--c3-muted); margin-bottom: 10px; }
+.theme-toggle { display: inline-flex; border: 1px solid var(--c4-rule); border-radius: 999px; overflow: hidden; background: var(--c8-card); }
+.theme-toggle button { border: 0; background: transparent; color: var(--c3-muted); padding: 6px 10px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.theme-toggle button[aria-pressed="true"] { background: var(--c9-sky); color: #fff; }
+.masthead { text-align: center; padding: 8px 0 14px; border-bottom: 3px solid var(--c2-ink); }
+.masthead .logo { display: block; margin: 0 auto 8px; height: 56px; width: auto; max-width: 220px; object-fit: contain; }
+.masthead .brand-row { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.masthead .brand { font-family: "Times New Roman", Times, Georgia, serif; font-size: clamp(32px, 5vw, 44px); margin: 0 0 4px; }
+.masthead .brand a { color: inherit; text-decoration: none; }
+.masthead .sub { margin: 0 0 12px; font-size: 12px; color: var(--c3-muted); font-style: italic; }
+.masthead .meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c3-muted); border-top: 1px solid var(--c4-rule); padding-top: 8px; }
+.archive { margin: 14px 0 16px; padding: 12px; border-radius: 12px; background: var(--c8-card); border: 1px solid var(--c4-rule); }
+.archive .label { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c5-accent); margin: 0 0 8px; }
+.archive-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.archive-row a, .archive-row span { text-decoration: none; color: var(--c2-ink); border: 1px solid var(--c4-rule); border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 600; background: var(--c1-paper); }
+.archive-row a.today { border-color: var(--c9-sky); color: var(--c9-sky); }
+.live { margin: 0 0 18px; padding: 10px 12px; border-radius: 10px; background: var(--c8-card); border: 1px solid var(--c4-rule); display: flex; gap: 10px; align-items: center; font-size: 12.5px; }
+.live .pill { background: var(--c6-live); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; }
+.section-label { font-family: "Times New Roman", Times, Georgia, serif; font-size: 22px; margin: 0 0 12px; }
+.grid { display: grid; grid-template-columns: 1.55fr 0.9fr; gap: 24px; }
+.tagrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tag { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--c2-ink); color: var(--c2-ink); padding: 2px 6px; border-radius: 3px; }
+.tag.dev { border-color: var(--c7-develop); color: var(--c7-develop); }
+.tag.live { border-color: var(--c6-live); color: var(--c6-live); }
+.hero, .a2 article, .center article, .rail article { background: var(--c8-card); border: 1px solid var(--c4-rule); border-radius: 12px; overflow: hidden; }
+.hero { margin-bottom: 14px; }
+.hero .body, .a2 article, .center article, .rail article { padding: 14px 16px; }
+.hero img, .thumb img { display: block; width: 100%; height: auto; max-height: 280px; object-fit: cover; }
+.thumb { margin: 0 0 10px; border-radius: 8px; overflow: hidden; }
+.hero h2, .a2 h3, .center h3, .rail h4, .hub h2 { font-family: "Times New Roman", Times, Georgia, serif; font-weight: 700; line-height: 1.15; margin: 0 0 8px; }
+.hero h2 { font-size: 28px; }
+.hero h2 a, .a2 h3 a, .center h3 a, .rail h4 a { color: inherit; text-decoration: none; }
+.deck { font-size: 15px; color: var(--c3-muted); margin: 0 0 8px; }
+.lede, .a2 p, .center p, .rail p { margin: 0 0 6px; font-size: 13.5px; }
+.stamp, .src, .credit { font-size: 11px; color: var(--c3-muted); }
+.credit { display: block; margin-top: 4px; }
+.a2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.a2 h3 { font-size: 17px; }
+.center { display: grid; gap: 12px; }
+.center h3 { font-size: 18px; }
+.rail { display: grid; gap: 12px; align-content: start; }
+.rail h4 { font-size: 15px; }
+.hub { margin-top: 28px; padding-top: 18px; border-top: 2px solid var(--c2-ink); }
+.hub h2 { font-size: 26px; color: var(--c2-ink); }
+.hub .cap { font-size: 11px; color: var(--c3-muted); margin: 0 0 14px; }
+.site-footer { margin-top: 36px; padding: 22px 4px 10px; border-top: 2px solid var(--c2-ink); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+.footer-col .fname { font-family: "Times New Roman", Times, Georgia, serif; font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+.footer-col .fwhy, .footer-col .fcosmo-pitch, .footer-col .fmore { font-size: 13px; color: var(--c3-muted); margin: 0 0 8px; line-height: 1.4; }
+.footer-col .fwhy { font-style: italic; }
+.footer-col .fcredit { font-size: 12px; color: var(--c3-muted); margin: 0; }
+.footer-col .fcosmo-cta { margin: 0 0 8px; }
+.footer-col .fcosmo-cta a { color: var(--c9-sky); font-weight: 600; font-size: 13px; text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--c9-sky) 50%, transparent); }
+.note { margin-top: 16px; font-size: 11px; color: var(--c3-muted); }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .a2 { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .shell { padding: 12px 14px 40px; }
+  .masthead .brand { font-size: 28px; }
+  .hero h2 { font-size: 1.4rem; }
+  .live { flex-direction: column; align-items: flex-start; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+  .hero img, .thumb img { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div>Last updated: <strong style="color:var(--c2-ink)">22 Sep 2026, 10:25 AM IST</strong> · Asia/Calcutta</div>
+    <div class="theme-toggle" role="group" aria-label="Color theme">
+    <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+  </div>
+  <header class="masthead">
+    <a href="index.html" class="brand-row"><img class="logo" src="images/logo.png" alt="CurrentWire"/></a>
+    <h1 class="brand"><a href="index.html">CurrentWire</a></h1>
+    <p class="sub">For the stories worth following, and the questions worth carrying into the day.</p>
+    <div class="meta"><span>Tuesday, 22 September 2026</span><span>Morning front</span><span>Asia/Calcutta</span></div>
+  </header>
+  <section class="archive" aria-label="Recent editions">
+    <p class="label">Recent editions</p>
+    <div class="archive-row">
+      <a class="today" href="#today">22 Sep 2026 · today (live)</a>
+      <span>21 Sep 2026</span><span>20 Sep 2026</span><span>19 Sep 2026</span>
+      <span>18 Sep 2026</span><span>17 Sep 2026</span><span>16 Sep 2026</span>
+    </div>
+  </section>
+  <div class="live"><span class="pill">LIVE</span><span>Google CSAM pathway · Alibaba Zhenwu V900 · Sensex/Nifty opened modestly higher · Pakistan Women won cricket bronze · Sri Lanka Easter verdict still pending · India-Sri Lanka gold final underway, India batting first, no result yet</span></div>
+  <h2 class="section-label" id="today">Top Picks</h2>
+  <p class="cap" style="margin:-4px 0 14px;font-size:12px;color:var(--c3-muted)">7 stories · middle stack for stronger/fresher · right rail 4 for balance</p>
+  <div class="grid">
+    <main>
+      <article class="hero">
+        <div class="body">
+          <div class="tagrow"><span class="tag">CyberSecurity</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h2><a href="stories/story-google-csam-report-india.html">Google proposes direct CSAM reporting pathway to Indian authorities</a></h2>
+          <p class="deck">Proposal with I4C and MeitY would route India-linked flags to domestic agencies; NCMEC-first chain break still depends on a technical framework</p>
+          <p class="lede">Google has agreed in principle, in talks with the Government of India, to report India-linked child sexual abuse material cases directly to Indian authorities rather than routing them first through NCMEC. Reuters, The Hindu and CNBC-TV18 describe a proposed I4C/MeitY pathway, not a finished live feed.</p>
+          <p class="src">Reuters · The Hindu · CNBC-TV18 · <span class="stamp">Filed 22 Sep 2026, 9:18 AM IST · Updated 22 Sep 2026, 9:18 AM IST</span></p>
+        </div>
+      </article>
+      <div class="a2">
+        <article>
+          <div class="tagrow"><span class="tag">AI / ML</span><span class="tag">New</span></div>
+          <h3><a href="stories/story-alibaba-zhenwu-v900.html">Alibaba unveils Zhenwu V900 AI accelerator, targets over 20 GW cloud capacity by 2032</a></h3>
+          <p>Alibaba&#x27;s T-Head Zhenwu V900 is framed as China&#x27;s most powerful AI chip, tripling predecessor performance, with a more-than-20 GW Alibaba Cloud capacity goal by 2032. Distinct from Dimon spend commentary and the earlier M890 line.</p>
+          <p class="stamp">Filed 22 Sep 2026, 9:18 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+        </article>
+        <article>
+          <div class="tagrow"><span class="tag">Neighbours</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h3><a href="stories/story-sri-lanka-easter-verdict-day.html">Sri Lanka court set to deliver Easter Sunday trial verdict for 24 defendants</a></h3>
+          <p>Colombo Special Three-Judge High Court was due from 9:30 am local Tuesday in the main 2019 Easter Sunday trial of 24 defendants. Judgment result still pending as of the 09:18 IST cutoff.</p>
+          <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+        </article>
+      </div>
+    </main>
+    <aside class="rail" aria-label="More Top Picks">
+      <article>
+        <div class="tagrow"><span class="tag">MMR</span><span class="tag dev">Continuing</span><span class="tag dev">Developing</span></div>
+        <h4><a href="stories/story-iit-bombay-cctv-crime-branch.html">Crime Branch treats exam-hall CCTV as central to Sahil Wakode death probe</a></h4>
+        <p>Mumbai Crime Branch is analysing exam-hall and hostel CCTV in the Sahil Wakode death probe, according to an Indian Express update citing police sources. Single-outlet CCTV narrative; caste and abetment claims remain allegations.</p>
+        <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+      </article>
+      <article>
+        <div class="tagrow"><span class="tag">United States</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+        <h4><a href="stories/story-us-greenland-bases-arctic-deal.html">US to reopen Greenland base sites under Arctic security deal set for UN signing</a></h4>
+        <p>The United States plans to reopen Narsarsuaq and establish a presence at Mestersvig under an Arctic security deal with Denmark and Greenland due for signing at UNHQ at 10:30 a.m. ET Tuesday. Text not final until signed.</p>
+        <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+      </article>
+      <article>
+        <div class="thumb"><img src="images/india-women-cricket.jpg" alt="Women&#x27;s international cricket match action"/></div>
+        <div class="tagrow"><span class="tag">Cricket</span><span class="tag dev">Continuing</span></div>
+        <h4><a href="stories/story-india-sl-cricket-final.html">India face Sri Lanka for Asian Games women&#x27;s cricket gold</a></h4>
+        <p>India take on Sri Lanka for Asian Games women&#x27;s cricket gold at Korogi Sports Park from about 10:30 IST. Live on Sony Sports / LIV; morning watch as of this edition.</p>
+        <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+        <span class="credit">Wikimedia Commons  -  2017 Women&#x27;s Cricket World Cup match imagery (illustrative sporting context; not the 2026 Asian Games final).</span>
+      </article>
+      <article>
+        <div class="tagrow"><span class="tag">India</span><span class="tag">New</span></div>
+        <h4><a href="stories/story-sc-default-bail-investigation.html">Supreme Court restores UAPA investigation extension, rejects default bail plea</a></h4>
+        <p>The Supreme Court restored a special judge&#x27;s 15-day extension for the Mumbai ATS investigation, holding that a statement about sufficient chargesheet material did not by itself mean the probe was complete.</p>
+        <p class="stamp">Filed 22 Sep 2026, 6:18 AM IST · Updated 22 Sep 2026, 6:18 AM IST</p>
+      </article>
+    </aside>
+  </div>
+  <section class="hub" id="india">
+    <h2>India</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">India</span><span class="tag">New</span></div>
+            <h2><a href="stories/story-jaishankar-multilateralism-unga.html">Jaishankar says global order is under stress, urges reformed multilateralism</a></h2>
+            <p class="deck">At a UNGA-side Partners for Multilateralism Summit, EAM S. Jaishankar flagged a &#x27;four F crisis&#x27; of fuel, food, fertiliser and finance and said multilateralism must assert itself.</p>
+            <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+          </div>
+        </article>
+        <div class="a2">
+          <article>
+            <div class="tagrow"><span class="tag">India</span><span class="tag">New</span></div>
+            <h3><a href="stories/story-sc-default-bail-investigation.html">Supreme Court restores UAPA investigation extension, rejects default bail plea</a></h3>
+            <p>The Supreme Court restored a special judge&#x27;s 15-day extension for the Mumbai ATS investigation and dismissed the resulting default-bail application. The ruling concerns investigation time, not guilt.</p>
+            <p class="stamp">Filed 22 Sep 2026, 6:18 AM IST · Updated 22 Sep 2026, 6:18 AM IST</p>
+          </article>
+          <article>
+            <div class="tagrow"><span class="tag">India</span><span class="tag">New</span></div>
+            <h3><a href="stories/story-ongc-mahanadi-gas.html">ONGC strikes natural gas at first deepwater Mahanadi well off Odisha</a></h3>
+            <p>ONGC reported encouraging natural gas flow at MDW-28, its first deepwater Mahanadi well about 43 km off Konark. Appraisal and commercial evaluation are still required.</p>
+            <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+          </article>
+        </div>
+      </main>
+      <aside class="rail" aria-label="More India">
+        <article>
+          <div class="tagrow"><span class="tag">Maharashtra</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-maharashtra-crop-survey-amravati.html">Maharashtra begins early crop-loss surveys as drought call still pending</a></h4>
+          <p>Maharashtra has started early crop-loss inspections in drought-hit belts while a formal drought declaration remains pending. Fadnavis says relief need not wait for NDRF-style panchnamas from 5 October.</p>
+          <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="india-finance">
+    <h2>India Finance</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">India Finance</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-sensex-nifty-open.html">Sensex, Nifty open modestly higher as early gains stay thin</a></h2>
+            <p class="deck">Cash equities opened higher on Tuesday, with Sensex near 74,945 at the 09:21 IST print and Nifty near 23,458. Later early-session readings showed only small advances, not a market close.</p>
+            <p class="stamp">Filed 22 Sep 2026, 10:14 AM IST · Updated 22 Sep 2026, 10:25 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More India Finance">
+        <article>
+          <div class="tagrow"><span class="tag">India Finance</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-finmin-bank-strike-urge.html">Finance Ministry urges PSB and RRB staff to refrain from 28-30 September strike</a></h4>
+          <p>The Finance Ministry urged PSB and RRB employees to refrain from a 28-30 September strike during half-yearly closing, asking for dialogue. The strike has not been called off; five-day week remains under conciliation.</p>
+          <p class="stamp">Filed 22 Sep 2026, 9:18 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+        </article>
+        <article>
+          <div class="tagrow"><span class="tag">India Finance</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-gift-nifty-nse-ipo.html">GIFT Nifty holds positive bias ahead of cash open on NSE IPO allotment day</a></h4>
+          <p>CNBC-TV18 around 08:05 IST saw GIFT Nifty roughly 50 points higher ahead of the 09:15 IST cash open. Tuesday is NSE IPO allotment day; cash Sensex/Nifty opens not yet verified.</p>
+          <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="maharashtra">
+    <h2>Maharashtra</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">Maharashtra</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-maharashtra-crop-survey-amravati.html">Maharashtra begins early crop-loss surveys as drought call still pending</a></h2>
+            <p class="deck">Maharashtra has started early crop-loss inspections in drought-hit belts while a formal drought declaration remains pending. Fadnavis says relief need not wait for NDRF-style panchnamas from 5 October.</p>
+            <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More Maharashtra">
+        <article>
+          <div class="tagrow"><span class="tag">MMR</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-bombay-hc-festival-noise.html">Bombay HC takes suo motu cognisance of festival noise, questions midnight loudspeaker permissions</a></h4>
+          <p>Bombay High Court took suo motu cognisance of festival noise and related air pollution, questioning midnight loudspeaker permissions and flagging a prima facie firecracker ban. Matter listed Tuesday for State, MPCB and BMC replies.</p>
+          <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="mmr">
+    <h2>MMR</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">MMR</span><span class="tag dev">Continuing</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-iit-bombay-cctv-crime-branch.html">Crime Branch treats exam-hall CCTV as central to Sahil Wakode death probe</a></h2>
+            <p class="deck">Mumbai Crime Branch is analysing exam-hall and hostel CCTV in the Sahil Wakode death probe, according to an Indian Express update citing police sources. Single-outlet CCTV narrative; faculty march coverage kept as linked prior story.</p>
+            <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More MMR">
+        <article>
+          <div class="tagrow"><span class="tag">MMR</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-bombay-hc-festival-noise.html">Bombay HC takes suo motu cognisance of festival noise, questions midnight loudspeaker permissions</a></h4>
+          <p>Bombay High Court took suo motu cognisance of festival noise and related air pollution, questioning midnight loudspeaker permissions and flagging a prima facie firecracker ban. Matter listed Tuesday for State, MPCB and BMC replies.</p>
+          <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+        </article>
+        <article>
+          <div class="tagrow"><span class="tag">MMR</span><span class="tag dev">Continuing</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-iit-bombay-faculty-march.html">IIT Bombay faculty stage peace march backing professor named in student-death FIR</a></h4>
+          <p>A large section of IIT Bombay faculty held a peace march on Monday in support of Prof Suryanarayana Doolla, named in an FIR linked to the death of student Sahil Wakode. Linked prior campus story; CCTV continuing page is the fresher probe update.</p>
+          <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="neighbours">
+    <h2>Neighbours</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">Neighbours</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-sri-lanka-easter-verdict-day.html">Sri Lanka court set to deliver Easter Sunday trial verdict for 24 defendants</a></h2>
+            <p class="deck">Colombo Special Three-Judge High Court was due from 9:30 am local Tuesday to begin its verdict for 24 men in the main 2019 Easter Sunday trial. Result still pending as of 09:18 IST.</p>
+            <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More Neighbours">
+        <article>
+          <div class="tagrow"><span class="tag">Neighbours</span><span class="tag dev">Developing</span><span class="tag dev">Continuing</span></div>
+          <h4><a href="stories/story-pakistan-pti-islamabad-reinforcement.html">Pakistan provinces send police to Islamabad ahead of PTI Sept 27 march</a></h4>
+          <p>Geo reported Sindh and Punjab police contingents heading to Islamabad ahead of PTI&#x27;s 27 September march for Imran Khan&#x27;s release, as containers were welded and MPO detentions continued. Figures are sourced claims.</p>
+          <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="us">
+    <h2>United States</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">United States</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-us-greenland-bases-arctic-deal.html">US to reopen Greenland base sites under Arctic security deal set for UN signing</a></h2>
+            <p class="deck">The United States plans to reopen Narsarsuaq and establish a presence at Mestersvig under an Arctic security deal with Denmark and Greenland due for signing at UNHQ at 10:30 a.m. ET Tuesday. Text not final until signed; sovereignty not ceded, Danish and Greenlandic statements say.</p>
+            <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More United States">
+        <article>
+          <div class="tagrow"><span class="tag">United States</span><span class="tag dev">Continuing</span></div>
+          <h4><a href="stories/story-northeast-airports-resume-faa.html">Northeast US airport operations resume after Philadelphia TRACON telecom outage</a></h4>
+          <p>Northeast airport operations were resuming after a Philadelphia TRACON circuit failure and backup fiber cut. Duffy said lines were repaired; AP noted significant delays still expected at major hubs.</p>
+          <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+        </article>
+        <article>
+          <div class="tagrow"><span class="tag">United States</span><span class="tag dev">Continuing</span></div>
+          <h4><a href="stories/story-white-house-xi-peng-schedule.html">White House sets state-visit schedule for Xi Jinping and Peng Liyuan</a></h4>
+          <p>The White House released the ceremonial schedule for Xi Jinping and Peng Liyuan&#x27;s 23 to 25 September state visit, centred on Thursday 24 September. China&#x27;s MFA confirmed the window.</p>
+          <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="anz">
+    <h2>Australia &amp; New Zealand</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">ANZ</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-asx-200-opens-higher.html">ASX 200 opens higher as Wall Street tech rally lifts early trade</a></h2>
+            <p class="deck">The Australian benchmark was about 0.5% higher near 8,771 around 5:40 AM IST after record Nasdaq gains. Softer oil weighed on local energy shares. Figures describe early trade, not the close.</p>
+            <p class="stamp">Filed 22 Sep 2026, 6:18 AM IST · Updated 22 Sep 2026, 6:18 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More ANZ">
+        <article>
+          <h4>On this desk</h4>
+          <p>Only one ANZ story in this edition. Related Asia open coverage sits under APAC (Hang Seng) and in Top Picks where overlap warrants.</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="apac">
+    <h2>APAC</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">APAC</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-hang-seng-open.html">Hang Seng opens about 0.51% higher as Wall Street tech rally lifts Asia</a></h2>
+            <p class="deck">Hong Kong&#x27;s Hang Seng opened about 0.51% higher near 25,170, with Hang Seng Tech up about 1.01%. Point-in-time open prints, not an Asia close; distinct from the earlier ASX open.</p>
+            <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More APAC">
+        <article>
+          <div class="tagrow"><span class="tag">APAC</span><span class="tag">New</span><span class="tag dev">Continuing</span></div>
+          <h4><a href="stories/story-north-korea-kcna-new-weapon.html">North Korea says missile bureau tested new weapon with Kim present</a></h4>
+          <p>KCNA said North Korea&#x27;s missile bureau successfully tested a new weapon on Sunday with Kim Jong Un present, without naming the system. The claim sits separate from Seoul&#x27;s earlier East Sea SRBM assessment.</p>
+          <p class="stamp">Filed 22 Sep 2026, 4:12 AM IST · Updated 22 Sep 2026, 4:12 AM IST</p>
+        </article>
+        <article>
+          <div class="tagrow"><span class="tag">APAC</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+          <h4><a href="stories/story-rubio-japan-korea-unga.html">Rubio meets Japan and Korea FMs at UNGA, reaffirms Taiwan Strait peace and Korea denuclearisation</a></h4>
+          <p>On UNGA sidelines, Rubio met Japan and South Korea foreign ministers. A joint statement stressed extended deterrence, Taiwan Strait peace and stability, and Korea denuclearisation ahead of Trump-Xi week.</p>
+          <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 2:22 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="ai-ml">
+    <h2>AI / ML</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">AI / ML</span><span class="tag">New</span></div>
+            <h2><a href="stories/story-alibaba-zhenwu-v900.html">Alibaba unveils Zhenwu V900 AI accelerator, targets over 20 GW cloud capacity by 2032</a></h2>
+            <p class="deck">Alibaba outlined the Zhenwu V900 T-Head accelerator as China&#x27;s most powerful AI chip, claiming it triples predecessor performance, with a more-than-20 GW cloud capacity goal by 2032.</p>
+            <p class="stamp">Filed 22 Sep 2026, 9:18 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More AI / ML">
+        <article>
+          <div class="tagrow"><span class="tag">AI / ML</span><span class="tag">New</span></div>
+          <h4><a href="stories/story-dimon-ai-capex-1tn.html">Jamie Dimon says hyperscaler AI spending could reach $1 trillion next year</a></h4>
+          <p>JPMorgan CEO Jamie Dimon said hyperscaler AI ecosystem spending could reach $1 trillion next year, up from about $300bn last year and $700bn this year. CEO view, not audited hyperscaler capex.</p>
+          <p class="stamp">Filed 22 Sep 2026, 8:05 AM IST · Updated 22 Sep 2026, 8:05 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="cybersecurity">
+    <h2>CyberSecurity</h2>
+    <p class="cap">Section hub · stories from this edition</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">CyberSecurity</span><span class="tag">New</span><span class="tag dev">Developing</span></div>
+            <h2><a href="stories/story-google-csam-report-india.html">Google proposes direct CSAM reporting pathway to Indian authorities</a></h2>
+            <p class="deck">Google has agreed in principle to a proposed I4C/MeitY pathway for India-linked CSAM reports, a break from the usual NCMEC-first chain once a technical framework is ready. Not a finished live feed.</p>
+            <p class="stamp">Filed 22 Sep 2026, 9:18 AM IST · Updated 22 Sep 2026, 9:18 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More CyberSecurity">
+        <article>
+          <h4>On this desk</h4>
+          <p>Only one CyberSecurity story in this edition. It also leads Top Picks; related digital and governance coverage may appear under India when the pathway advances.</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <section class="hub" id="cricket">
+    <h2>Cricket</h2>
+    <p class="cap">Section hub · Pakistan&#x27;s bronze confirmed; India-Sri Lanka gold final underway/watch, no result yet</p>
+    <div class="grid">
+      <main>
+        <article class="hero">
+          <div class="body">
+            <div class="tagrow"><span class="tag">Cricket</span><span class="tag">New</span></div>
+            <h2><a href="stories/story-pakistan-women-bronze-bangladesh.html">Pakistan women take Asian Games cricket bronze, beat Bangladesh by 31 runs</a></h2>
+            <p class="deck">Pakistan posted 145/8 and Bangladesh finished 114/7 in the bronze match at Korogi Sports Park. The 31-run result is confirmed; India won the toss and bat first in the gold final.</p>
+            <p class="stamp">Filed 22 Sep 2026, 10:14 AM IST · Updated 22 Sep 2026, 10:25 AM IST</p>
+          </div>
+        </article>
+      </main>
+      <aside class="rail" aria-label="More Cricket">
+        <article>
+          <div class="tagrow"><span class="tag">Cricket</span><span class="tag dev">Continuing</span></div>
+          <h4><a href="stories/story-india-sl-cricket-final.html">India face Sri Lanka for Asian Games women&#x27;s cricket gold</a></h4>
+          <p>India won the toss and chose to bat first in the gold final at Korogi Sports Park, starting about 10:30 IST. The match is underway/watch, with no result yet as of 10:25 IST.</p>
+          <p class="stamp">Filed 22 Sep 2026, 12:29 AM IST · Updated 22 Sep 2026, 10:25 AM IST</p>
+        </article>
+      </aside>
+    </div>
+  </section>
+  <p class="note">CurrentWire · packet-2026-09-22-1000-IST · Top Picks 7 (middle 3 + rail 4) · Asia/Calcutta</p>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="fname">CurrentWire</p>
+      <p class="fwhy">For the stories worth following, and the questions worth carrying into the day.</p>
+      <p class="fcredit">Built and maintained by Ojaas Hampiholi</p>
+    </div>
+    <div class="footer-col">
+      <p class="fname">The Cosmic Notebook</p>
+      <p class="fcosmo-pitch">Clear, curious notes on the forces, worlds, and ideas that shape our universe.</p>
+      <p class="fcosmo-cta"><a href="https://ojaashampiholi.github.io/the-cosmic-notebook/" target="_blank" rel="noopener noreferrer">Visit The Cosmic Notebook</a></p>
+      <p class="fmore">More from Ojaas (tech and fiction) coming here.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var key = "cw-theme";
+  
+
+  function spinGradient() {
+    root.style.setProperty("--grad-angle", Math.floor(Math.random() * 360) + "deg");
+  }
+  window.spinGradient = spinGradient;
+  function apply(choice) {
+    root.setAttribute("data-theme", choice);
+    localStorage.setItem(key, choice);
+    document.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-theme-choice") === choice ? "true" : "false");
+    });
+    spinGradient();
+  }
+  apply(localStorage.getItem(key) || "system");
+  document.querySelectorAll("[data-theme-choice]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-theme-choice")); });
+  });
+})();
+</script>
+</body>
+</html>
