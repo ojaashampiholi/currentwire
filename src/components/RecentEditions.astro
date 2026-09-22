@@ -1,0 +1,29 @@
+---
+import { recentEditionDates, shortDateLabel, sitePath } from '../lib/site';
+
+interface Props {
+  activeDate: string;
+  todayLinksHome?: boolean;
+}
+
+const { activeDate, todayLinksHome = false } = Astro.props;
+const dates = recentEditionDates();
+---
+
+<section class="archive" aria-label="Recent editions">
+  <p class="label">Recent editions</p>
+  <div class="archive-row">
+    {
+      dates.map((date, index) => {
+        const href = todayLinksHome && index === 0 ? sitePath() : sitePath(`archive/${date}`);
+        const label = index === 0 ? `${shortDateLabel(date)} · today` : shortDateLabel(date);
+        const current = date === activeDate;
+        return (
+          <a href={href} class={current ? 'today' : undefined} aria-current={current ? 'page' : undefined}>
+            {label}
+          </a>
+        );
+      })
+    }
+  </div>
+</section>

@@ -1,29 +1,44 @@
 # CurrentWire
 
-Static HTML preview of **CurrentWire** — a morning news front for the stories worth following, and the questions worth carrying into the day.
+Production Astro site for **CurrentWire**. For the stories worth following, and the questions worth carrying into the day.
 
-Repo: [ojaashampiholi/currentwire](https://github.com/ojaashampiholi/currentwire)
+## Requirements
 
-## Open locally
+Node.js 22 or newer, and npm.
 
-Open `index.html` in a browser (`file://` works), or serve the folder:
+## Install, build, preview
 
 ```bash
-python3 -m http.server 8080 --directory .
-# then visit http://localhost:8080/
+npm install
+npm run build
+npm run preview
 ```
 
-Story pages live under `stories/`. Images under `images/`.
+`npm run dev` starts the local dev server.
 
-## What’s here
+The build is static HTML (`output: 'static'`) written to `dist/`.
 
-- Front page (`index.html`) with Top Picks, hubs, theme toggle (system / light / dark), and a random gradient angle on each theme apply
-- Light theme: soft blue → cream → soft red loop; dark theme: navy wash
-- Relative links only — no build step required for this preview
+## GitHub Pages
 
-## Roadmap
+Defaults suit a site served from `/`. For a project site at `https://ojaashampiholi.github.io/currentwire/`:
 
-An Astro (or similar) migration may follow for routing, components, and deployment. This folder is the push-ready static snapshot.
+```bash
+BASE_PATH=/currentwire/ SITE=https://ojaashampiholi.github.io npm run build
+```
+
+Upload the contents of `dist/`. No host-specific adapter is required.
+
+## Content
+
+- Stories: `src/content/stories/*.md` (content collection in `src/content/config.ts`)
+- Section hubs and order: `src/content/sections/*.json`
+- Edition fronts: `src/data/editions/edition-YYYY-MM-DD.json`
+
+The home page renders the latest edition. Archive pages cover the seven most recent edition days. Section hubs use the same Top Picks ladder as the front: a middle stack and a right rail.
+
+## Theme
+
+System, Light, and Dark. Light runs light blue, cream, and light red. Dark stays in navy, indigo, and plum. The gradient angle changes when a theme is applied.
 
 ## Credit
 

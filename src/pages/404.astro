@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { latestEdition, longDateLabel, sitePath } from '../lib/site';
+
+const edition = latestEdition();
+---
+
+<BaseLayout
+  title="Page not found · CurrentWire"
+  description="That CurrentWire page is not on the desk."
+  lastUpdatedIst={edition.last_updated_ist}
+  dateLabel={longDateLabel(edition.date)}
+  kicker="Archive"
+>
+  <p class="empty">
+    That page is not on the desk. Return to the <a href={sitePath()}>CurrentWire front</a>.
+  </p>
+</BaseLayout>

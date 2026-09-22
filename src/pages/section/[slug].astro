@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHub from '../../components/SectionHub.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compareStories, latestEdition, longDateLabel, type SectionEntry } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const sections = await getCollection('sections');
+  return sections.map((section) => ({
+    params: { slug: section.data.slug },
+    props: { section },
+  }));
+}
+
+interface Props {
+  section: SectionEntry;
+}
+
+const { section } = Astro.props;
+const edition = latestEdition();
+const [stories, sections] = await Promise.all([getCollection('stories'), getCollection('sections')]);
+const items = stories.filter((story) => story.data.section === section.data.slug).slice().sort(compareStories);
+const dateLabel = longDateLabel(edition.date);
+---
+
+<BaseLayout
+  title={`${section.data.title} · CurrentWire`}
+  description={section.data.blurb}
+  lastUpdatedIst={edition.last_updated_ist}
+  dateLabel={dateLabel}
+  kicker={section.data.title}
+  timezone={edition.timezone}
+>
+  <SectionHub
+    section={section}
+    stories={items}
+    sections={sections}
+    heading="h1"
+    linkTitle={false}
+  />
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+import LiveWire from './LiveWire.astro';
+import SectionHub from './SectionHub.astro';
+import TopPicks from './TopPicks.astro';
+import {
+  compareStories,
+  requireStories,
+  sectionsInOrder,
+  toCard,
+  type SectionEntry,
+  type StoryEntry,
+} from '../lib/site';
+import type { Edition } from '../lib/types';
+
+interface Props {
+  edition: Edition;
+  stories: StoryEntry[];
+  sections: SectionEntry[];
+}
+
+const { edition, stories, sections } = Astro.props;
+const bySlug = new Map(stories.map((story) => [story.data.slug, story]));
+const middle = requireStories(edition.top_picks.middle, bySlug);
+const rail = requireStories(edition.top_picks.rail, bySlug);
+const total = middle.length + rail.length;
+const ordered = sectionsInOrder(sections, edition.hub_order);
+---
+
+<LiveWire items={edition.live_wire} />
+<h2 class="section-label" id="today">Top Picks</h2>
+<p class="cap" style="margin:-4px 0 14px;font-size:12px;color:var(--c3-muted)">
+  {total} stories · middle stack for the stronger and fresher · right rail for balance
+</p>
+<TopPicks
+  middle={middle.map((story) => toCard(story, sections))}
+  rail={rail.map((story) => toCard(story, sections))}
+  railLabel="More Top Picks"
+/>
+{
+  ordered.map((section) => {
+    const items = stories.filter((story) => story.data.section === section.data.slug).slice().sort(compareStories);
+    if (!items.length) return null;
+    return <SectionHub section={section} stories={items} sections={sections} />;
+  })
+}
+<p class="note">CurrentWire · {edition.label} · {edition.timezone}</p>

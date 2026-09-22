@@ -1,0 +1,46 @@
+---
+import TopPicks from './TopPicks.astro';
+import { sitePath, splitLadder, toCard, type SectionEntry, type StoryEntry } from '../lib/site';
+
+interface Props {
+  section: SectionEntry;
+  stories: StoryEntry[];
+  sections: SectionEntry[];
+  heading?: 'h1' | 'h2';
+  linkTitle?: boolean;
+}
+
+const { section, stories, sections, heading = 'h2', linkTitle = true } = Astro.props;
+const ladder = splitLadder(stories);
+const href = sitePath(`section/${section.data.slug}`);
+const cap = stories.length === 1
+  ? 'Section hub · one story from this edition'
+  : `Section hub · ${stories.length} stories from this edition`;
+---
+
+<section class="hub" id={section.data.slug}>
+  {
+    heading === 'h1' ? (
+      <h1>
+        {linkTitle ? <a href={href}>{section.data.title}</a> : section.data.title}
+      </h1>
+    ) : (
+      <h2>
+        {linkTitle ? <a href={href}>{section.data.title}</a> : section.data.title}
+      </h2>
+    )
+  }
+  <p class="cap">{stories.length ? cap : section.data.blurb}</p>
+  {
+    stories.length > 0 ? (
+      <TopPicks
+        middle={ladder.middle.map((story) => toCard(story, sections))}
+        rail={ladder.rail.map((story) => toCard(story, sections))}
+        railLabel={`More ${section.data.title}`}
+        emptyRailNote="Only one story is filed in this section for this edition."
+      />
+    ) : (
+      <p class="empty">No stories filed in this section for this edition.</p>
+    )
+  }
+</section>

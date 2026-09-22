@@ -1,0 +1,16 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <div class="live">
+      <span class="pill">LIVE</span>
+      <span>{items.join(' · ')}</span>
+    </div>
+  )
+}

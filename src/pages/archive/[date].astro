@@ -1,0 +1,43 @@
+---
+import EditionFront from '../../components/EditionFront.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { editions, loadDesk, longDateLabel, recentEditionDates } from '../../lib/site';
+
+export function getStaticPaths() {
+  return recentEditionDates().map((date) => ({
+    params: { date },
+    props: { date },
+  }));
+}
+
+interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+const edition = editions[date];
+const { stories, sections } = edition ? await loadDesk() : { stories: [], sections: [] };
+const dateLabel = longDateLabel(date);
+---
+
+<BaseLayout
+  title={`CurrentWire · ${dateLabel}`}
+  description={edition
+    ? `CurrentWire edition for ${dateLabel}.`
+    : `No CurrentWire edition was filed for ${dateLabel}.`}
+  lastUpdatedIst={edition?.last_updated_ist ?? '2026-09-22 10:14 AM IST'}
+  dateLabel={dateLabel}
+  kicker={edition ? 'Edition' : 'Archive'}
+  timezone="Asia/Calcutta"
+  activeEdition={date}
+>
+  {
+    edition ? (
+      <EditionFront edition={edition} stories={stories} sections={sections} />
+    ) : (
+      <p class="empty">
+        No edition was filed for {dateLabel}. Recent editions lists the seven days CurrentWire is keeping on the desk.
+      </p>
+    )
+  }
+</BaseLayout>
